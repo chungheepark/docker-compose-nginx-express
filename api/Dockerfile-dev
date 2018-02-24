@@ -1,0 +1,7 @@
+FROM node:8.9.4-alpine
+MAINTAINER Chunghee park <dev.roy.park@gmail.com>
+
+WORKDIR /app
+
+ADD    api/start-dev.sh         /start-dev.sh
+RUN    chmod +x /*.sh

@@ -1,0 +1,36 @@
+version: '2.1'
+
+services:
+  nginx:
+    container_name: node-ningx-proxy
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    links:
+      - api-server:api-server
+      - media-server:media-server
+    ports:
+      - 4000:4000
+      - 5000:5000
+
+  api-server:
+    container_name: picky-api-server
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile-dev
+    command: /start-dev.sh
+    volumes:
+      - ./api/src:/app/src
+      - ./api/package.json:/app/package.json
+      - ./api/node_modules:/app/node_modules
+
+  media-server:
+    container_name: picky-media-server
+    build:
+      context: .
+      dockerfile: ./media/Dockerfile-dev
+    command: /start-dev.sh
+    volumes:
+      - ./media/src:/app/src
+      - ./media/package.json:/app/package.json
+      - ./media/node_modules:/app/node_modules

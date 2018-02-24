@@ -1,0 +1,17 @@
+{
+  "name": "MEDIA-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "uuid": "^3.2.1",
+    "gm": "^1.23.1"
+  }
+}
