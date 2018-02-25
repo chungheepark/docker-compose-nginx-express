@@ -88,6 +88,10 @@ volumes # 호스트의 파일시스템을 컨테이너가 공유
 command # 컨테이너가 실행할 명령어 기술 
 ```
 
+## 참고링크
+http://seokjun.kr/docker-nginx-node/
+http://raccoonyy.github.io/docker-usages-for-dev-environment-setup/
+
 ## Trouble shooting
 + 이미지 빌드를 할 수 없다고 나옴.
   + 해당 이미지를 사용중인 컨테이너가 작동중일 수 있음.
